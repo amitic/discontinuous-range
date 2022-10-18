@@ -1,6 +1,6 @@
 {
-  "name": "discontinuous-range",
-  "version": "1.0.0",
+  "name": "@amitic/discontinuous-range",
+  "version": "1.1.0",
   "description": "for adding, subtracting, and indexing discontinuous ranges of numbers",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dtudury/discontinuous-range.git"
+    "url": "https://github.com/amitic/discontinuous-range.git"
   },
   "keywords": [
     "discontinuous",
@@ -18,9 +18,9 @@
   "author": "David Tudury <david.tudury@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dtudury/discontinuous-range/issues"
+    "url": "https://github.com/amitic/discontinuous-range/issues"
   },
-  "homepage": "https://github.com/dtudury/discontinuous-range",
+  "homepage": "https://github.com/amitic/discontinuous-range",
   "devDependencies": {
     "mocha": "^1.21.4"
   }
