@@ -13,6 +13,14 @@ _SubRange.prototype.touches = function (range) {
     return !(this.high + 1 < range.low || this.low - 1 > range.high);
 };
 
+_SubRange.prototype.before = function (range) {
+    return this.high + 1 < range.low;
+};
+
+_SubRange.prototype.after = function (range) {
+    return this.low - 1 > range.high;
+};
+
 //returns inclusive combination of _SubRanges as a _SubRange
 _SubRange.prototype.add = function (range) {
     return this.touches(range) && new _SubRange(Math.min(this.low, range.low), Math.max(this.high, range.high));
@@ -58,7 +66,7 @@ DiscontinuousRange.prototype.add = function (a, b) {
     function _add(subrange) {
         var new_ranges = [];
         var i = 0;
-        while (i < self.ranges.length && !subrange.touches(self.ranges[i])) {
+        while (i < self.ranges.length && subrange.after(self.ranges[i])) {
             new_ranges.push(self.ranges[i].clone());
             i++;
         }
